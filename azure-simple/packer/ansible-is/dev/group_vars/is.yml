@@ -1,0 +1,110 @@
+# ----------------------------------------------------------------------------
+#  Copyright (c) 2020 WSO2, Inc. http://www.wso2.org
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+# ----------------------------------------------------------------------------
+
+wso2_group: wso2
+wso2_user: wso2carbon
+product_name: wso2is
+product_version: 5.10.0
+target: /mnt
+product_package_location: files
+jdbc_driver: mysql-connector-java-5.1.48-bin.jar
+
+# Performance tuning configurations
+enable_performance_tuning: false
+performance_tuning_file_list:
+  - { src: '{{ product_package_location }}/system/etc/sysctl.conf',
+      dest: '/etc/sysctl.conf' }
+  - { src: '{{ product_package_location }}/system/etc/security/limits.conf',
+      dest: '/etc/security/limits.conf' }
+
+# Set the location the product packages should reside in (eg: "local" in the /files directory, "remote" in a remote location)
+pack_location: local
+#pack_location: remote
+#remote_jdk: "<URL_TO_JDK_FILE>"
+#remote_pack: "<URL_TO_APIM_ANALYTICS_PACK>"
+
+# JDK Distributions
+jdk_name: amazon-corretto-8.242.08.1-linux-x64
+java_dir: /opt
+java_symlink: "{{ java_dir }}/java"
+java_home: "{{ java_dir }}/{{ jdk_name }}"
+
+is_analytics_hostname: localhost
+
+# Data source configurations for the shared database which hosts registry and user management tables
+wso2is_shared_db_type: mysql
+wso2is_shared_db_url: jdbc:mysql://CONNECTION_STRING:3306/shared_db
+wso2is_shared_db_username: shared_user@wso2isdb
+wso2is_shared_db_password: BEstr11ng_#12
+wso2is_shared_db_validation_query: "SELECT 1"
+
+# Data source configurations for the database which hosts identity tables
+wso2is_identity_db_type: mysql
+wso2is_identity_db_url: jdbc:mysql://CONNECTION_STRING:3306/identity_db
+wso2is_identity_db_username: identity_user@wso2isdb
+wso2is_identity_db_password: BEstr11ng_#12
+wso2is_identity_db_validation_query: "SELECT 1"
+
+# Data source configurations for the database which hosts workflow (WSO2 product BPS) tables
+wso2is_bps_db_type: h2
+wso2is_bps_db_url: jdbc:h2:file:./repository/database/jpadb;DB_CLOSE_ON_EXIT=FALSE;MVCC=TRUE
+wso2is_bps_db_username: wso2carbon
+wso2is_bps_db_password: wso2carbon
+wso2is_bps_db_driver: org.h2.Driver
+wso2is_bps_db_validation_query: "SELECT 1"
+
+# Data source configurations for the database which hosts consent management tables
+wso2is_consent_db_id: WSO2ConsentDS
+wso2is_consent_db_type: h2
+wso2is_consent_db_url: jdbc:h2:./repository/database/WSO2IDENTITY_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000
+wso2is_consent_db_username: wso2carbon
+wso2is_consent_db_password: wso2carbon
+wso2is_consent_db_driver: org.h2.Driver
+wso2is_consent_db_validation_query: "SELECT 1"
+
+# Enable statistic publishing
+wso2is_enable_event_listener: true
+wso2is_enable_handler_for_login_stats: false
+wso2is_enable_handler_for_session_stats: false
+
+# KeyStore which will be used for encrypting/decrypting passwords and other sensitive information.
+keystore_location: wso2carbon.jks
+keystore_type: JKS
+keystore_password: wso2carbon
+keystore_key_alias: wso2carbon
+keystore_key_password: wso2carbon
+
+# System wide trust-store which is used to maintain the certificates of all the trusted parties.
+truststore_location: client-truststore.jks
+truststore_type: JKS
+truststore_password: wso2carbon
+
+# List of configuration file templates, and the paths they should be written to
+config_files:
+  - { src: 'carbon-home/repository/conf/deployment.toml.j2',
+      dest: '{{ carbon_home }}/repository/conf/deployment.toml' }
+  - { src: 'carbon-home/bin/wso2server.sh.j2',
+      dest: '{{ carbon_home }}/bin/wso2server.sh' }
+
+# Add any new changes you want to add for the group/profile below.
+# If you add a new file under templates and parameterized the file, the values for those parameters should be added
+# below.
+# Example:
+# Changes applied to example.xml file.
+# example_driver_class_name: com.mysql.jdbc.Driver
+# example_url: jdbc:mysql://wso2is-pattern1-mysql-service:3306/WSO2_IDENTITY_DB autoReconnect=true&amp;verifyServerCertificate=false&amp;useSSL=true
+# example_username: wso2carbon
+# example_password: wso2carbon
