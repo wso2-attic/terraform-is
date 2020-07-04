@@ -18,7 +18,7 @@
 # NOTE: The parameterized values has the default values from the original pack. Please change them according to your
 # requirements. If you need to add additional configurations, please use the custom.yml under each role.
 
-hostname: localhost
+hostname: is.wso2test.com
 port_offset: 0
 
 # KeyStore which will be used for encrypting/decrypting passwords and other sensitive information.
