@@ -6,7 +6,7 @@
 * Install and set up [Terraform](https://www.terraform.io/) (>= v0.12.00 )
 
 
-###Instructions:
+### Instructions:
 
 1. Download the WSO2  Identity Server terraform resource.
 
