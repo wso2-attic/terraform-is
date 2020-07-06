@@ -12,7 +12,7 @@
 
 2. Build the Identity Server custom image. 
 
-   **Note:**  If you have an Azure subscription, update user variables in `centos-base.json`  file using your subscription credentials. The WSO2 Identity Server  5.10.0 distribution needs to download into the  `ansible-apim/files/packs` directory. If you do not have a WSO2 subscription account, you can sign up for a free trial [here](https://wso2.com/free-trial-subscription). 
+   **Note:**  If you have an Azure subscription, update user variables in `centos-base.json`  file using your subscription credentials. The WSO2 Identity Server 5.10.0 distribution needs to download into the  `ansible-is/files/packs` directory. If you do not have a WSO2 subscription account, you can sign up for a free trial [here](https://wso2.com/free-trial-subscription). 
 
    ```bash
    $ packer build centos-base.json 
