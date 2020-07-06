@@ -22,7 +22,7 @@
 
 
    ```bash
-     $ terraform apply  
+   $ terraform apply  
    ```
 
    **Note:**  Add the host entry in  `/etc/hosts` file with `<PUBLIC-IP> is.wso2test.com`  to access the WSO2 Identity Server console. 
