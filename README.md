@@ -25,7 +25,7 @@
    $ terraform apply  
    ```
 
-   **Note:**  Set the host entry `<PUBLIC-IP> is.wso2test.com` on `/etc/hosts` file  to access the WSO2 Identity Server console. 
+   **Note:**  Set the host entry `<PUBLIC-IP> is.wso2test.com` in `/etc/hosts` file  to access the WSO2 Identity Server console. 
  
 4. Try navigating to the following consoles from your favorite browser.
 
