@@ -20,11 +20,12 @@ $ packer build centos-base.json
 
 3. Update the build baseimage in terraform ‘variables.tf’ file and ‘terraform.tfvars’ maintains the Azure subscription credentials. 
 
+   **Note:**  Add the host entry in  `/etc/hosts` file with `<PUBLIC-IP> is.wso2test.com`  to access the WSO2 Identity Server console. 
+
 ```bash
 $ terraform apply  
 ```
 
-   **Note:**  Add the host entry in  `/etc/hosts` file with `<PUBLIC-IP> is.wso2test.com`  to access the WSO2 Identity Server console. 
  
 4. Try navigating to the following consoles from your favorite browser.
 
