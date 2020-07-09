@@ -6,4 +6,3 @@ mounts:
 runcmd:
  - sed -i 's|CONNECTION_STRING|${db_connection_strings}|g' /tmp/ansible-is/dev/group_vars/is.yml
  - cd /tmp/ansible-is && ansible-playbook -i dev/inventory site.yml
-

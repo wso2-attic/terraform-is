@@ -9,7 +9,7 @@ This repository contains the Ansible scripts for installing and configuring WSO2
 
 ## Supported Ansible Versions
 
-- Ansible 2.6.2
+- Ansible 2.8.0
 
 ## Directory Structure
 ```
@@ -28,8 +28,8 @@ This repository contains the Ansible scripts for installing and configuring WSO2
 │   └── Pattern2.md
 ├── files
 │   ├── lib
-│   │   ├── amazon-corretto-8.222.10.1-linux-x64.tar.gz
-│   │   └── mysql-connector-java-5.1.47-bin.jar
+│   │   ├── amazon-corretto-8.242.08.1-linux-x64.tar.gz
+│   │   └── mysql-connector-java-5.1.48-bin.jar
 │   └── packs
 │       └── wso2is-5.10.0.zip
 ├── issue_template.md
@@ -85,12 +85,12 @@ In **group_vars**, change the values of the following variables in all groups:
 The existing Ansible scripts contain the configurations to set-up a single node WSO2 Identity Server pattern. In order to deploy the pattern, you need to replace the `[ip_address]` given in the `inventory` file under `dev` folder by the IP of the location where you need to host the Identity Server. An example is given below.
 ```
 [is]
-wso2is ansible_host=172.28.128.4
+is_1 ansible_host=localhost ansible_user=wso2carbon ansible_connection=local
 ```
 
 Run the following command to run the scripts.
 
-`ansible-playbook -i dev site.yml`
+`ansible-playbook -i dev/inventory site.yml`
 
 If you need to alter the configurations given, please change the parameterized values in the yaml files under `group_vars` and `host_vars`.
 
