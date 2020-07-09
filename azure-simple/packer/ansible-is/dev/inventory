@@ -1,3 +1,2 @@
 [is]
 is_1 ansible_host=localhost ansible_user=centos ansible_connection=local
-
