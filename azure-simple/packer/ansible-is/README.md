@@ -69,8 +69,8 @@ Copy the following files to `files/packs` directory.
 
 Copy the following files to `files/lib` directory.
 
-1. [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/5.1.html)
-2. [Amazon Coretto for Linux x64 JDK](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)
+1. [MySQL Connector/J (5.1.48)](https://dev.mysql.com/downloads/connector/j/5.1.html)
+2. [Amazon Coretto for Linux x64 JDK (amazon-corretto-8.242.08.1)](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)
 
 ## Downloading from remote location
 
