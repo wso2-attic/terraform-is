@@ -92,4 +92,3 @@ variable "admin_password" {
 variable "db_admin_password" {
   default = "H@Sh1CoR3!"
 }
-

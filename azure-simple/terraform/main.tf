@@ -354,4 +354,3 @@ resource "azurerm_lb_rule" "wso2_lb_gateway_rule" {
   idle_timeout_in_minutes        = 5
   load_distribution              = "SourceIPProtocol"
 }
-
