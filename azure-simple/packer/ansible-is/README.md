@@ -9,7 +9,11 @@ This repository contains the Ansible scripts for installing and configuring WSO2
 
 ## Supported Ansible Versions
 
+<<<<<<< HEAD
 - Ansible 2.6.2
+=======
+- Ansible 2.8.0
+>>>>>>> 5.10.x
 
 ## Directory Structure
 ```
@@ -28,8 +32,13 @@ This repository contains the Ansible scripts for installing and configuring WSO2
 │   └── Pattern2.md
 ├── files
 │   ├── lib
+<<<<<<< HEAD
 │   │   ├── amazon-corretto-8.222.10.1-linux-x64.tar.gz
 │   │   └── mysql-connector-java-5.1.47-bin.jar
+=======
+│   │   ├── amazon-corretto-8.242.08.1-linux-x64.tar.gz
+│   │   └── mysql-connector-java-5.1.48-bin.jar
+>>>>>>> 5.10.x
 │   └── packs
 │       └── wso2is-5.10.0.zip
 ├── issue_template.md
@@ -69,8 +78,13 @@ Copy the following files to `files/packs` directory.
 
 Copy the following files to `files/lib` directory.
 
+<<<<<<< HEAD
 1. [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/5.1.html)
 2. [Amazon Coretto for Linux x64 JDK](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)
+=======
+1. [MySQL Connector/J (5.1.48)](https://dev.mysql.com/downloads/connector/j/5.1.html)
+2. [Amazon Coretto for Linux x64 JDK (amazon-corretto-8.242.08.1)](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)
+>>>>>>> 5.10.x
 
 ## Downloading from remote location
 
@@ -85,12 +99,20 @@ In **group_vars**, change the values of the following variables in all groups:
 The existing Ansible scripts contain the configurations to set-up a single node WSO2 Identity Server pattern. In order to deploy the pattern, you need to replace the `[ip_address]` given in the `inventory` file under `dev` folder by the IP of the location where you need to host the Identity Server. An example is given below.
 ```
 [is]
+<<<<<<< HEAD
 wso2is ansible_host=172.28.128.4
+=======
+is_1 ansible_host=localhost ansible_user=wso2carbon ansible_connection=local
+>>>>>>> 5.10.x
 ```
 
 Run the following command to run the scripts.
 
+<<<<<<< HEAD
 `ansible-playbook -i dev site.yml`
+=======
+`ansible-playbook -i dev/inventory site.yml`
+>>>>>>> 5.10.x
 
 If you need to alter the configurations given, please change the parameterized values in the yaml files under `group_vars` and `host_vars`.
 
@@ -98,7 +120,10 @@ If you need to alter the configurations given, please change the parameterized v
 
 The templates that are used by the Ansible scripts are in j2 format in-order to enable parameterization.
 
+<<<<<<< HEAD
 The `axis2.xml.j2` file is added under `roles/is/templates/carbon-home/repositoy/conf/axis2/`, in order to enable customizations. You can add any other customizations to `custom.yml` under tasks of each role as well.
+=======
+>>>>>>> 5.10.x
 
 #### Step 1
 Uncomment the following line in `main.yml` under the role you want to customize.

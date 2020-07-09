@@ -27,4 +27,8 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 
 #Disable the Selinux Security
+<<<<<<< HEAD
 sed -i 's/enforcing/disabled/g' /etc/selinux/config
+=======
+sed -i 's/enforcing/disabled/g' /etc/selinux/config
+>>>>>>> 5.10.x

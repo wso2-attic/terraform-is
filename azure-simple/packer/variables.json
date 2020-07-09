@@ -9,4 +9,8 @@
 
   "vm-size": "Standard_A1_v2",
   "storage-account" : "wso2installer"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5.10.x

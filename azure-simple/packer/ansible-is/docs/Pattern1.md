@@ -4,7 +4,11 @@
 ![HA clustered deployment of WSO2 Identity Server](images/Deployment-pattern-1-diagram.png)
 
 ## Changing hostname and ports
+<<<<<<< HEAD
 1. Uncomment the parameters in the `is_2.yml` and give the values for both `is_1.yml` and `is_2.yml`, following the [documentation](https://docs.wso2.com/display/IS560/Setting+Up+Deployment+Pattern+1) to deploy pattern 1.
+=======
+1. Uncomment the parameters in the `is_2.yml` and give the values for both `is_1.yml` and `is_2.yml`, following the [documentation](https://is.docs.wso2.com/en/latest/setup/deployment-guide/) to deploy pattern 1.
+>>>>>>> 5.10.x
 
 2. Uncomment the following lines in the `site.yml` file.
 ```
