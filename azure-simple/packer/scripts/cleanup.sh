@@ -23,4 +23,8 @@ yum -y clean all
 find /var/log -type f | while read f; do echo -ne '' > $f; done;
 
 # remove under tmp directory
+<<<<<<< HEAD
 #rm -rf /tmp/*
+=======
+#rm -rf /tmp/*
+>>>>>>> 5.10.x

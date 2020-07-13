@@ -36,3 +36,4 @@ data "template_file" "compute_template_script" {
     storage_access_key    = azurerm_storage_account.wso2_storage_account.primary_access_key
   }
 }
+

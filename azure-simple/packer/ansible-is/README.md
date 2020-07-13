@@ -9,7 +9,9 @@ This repository contains the Ansible scripts for installing and configuring WSO2
 
 ## Supported Ansible Versions
 
+
 - Ansible 2.8.0
+
 
 ## Directory Structure
 ```
@@ -69,8 +71,10 @@ Copy the following files to `files/packs` directory.
 
 Copy the following files to `files/lib` directory.
 
+
 1. [MySQL Connector/J (5.1.48)](https://dev.mysql.com/downloads/connector/j/5.1.html)
 2. [Amazon Coretto for Linux x64 JDK (amazon-corretto-8.242.08.1)](https://docs.aws.amazon.com/corretto/latest/corretto-8-ug/downloads-list.html)
+
 
 ## Downloading from remote location
 
@@ -86,6 +90,7 @@ The existing Ansible scripts contain the configurations to set-up a single node 
 ```
 [is]
 is_1 ansible_host=localhost ansible_user=wso2carbon ansible_connection=local
+
 ```
 
 Run the following command to run the scripts.
@@ -97,7 +102,6 @@ If you need to alter the configurations given, please change the parameterized v
 ### 2. Customize the WSO2 Ansible scripts
 
 The templates that are used by the Ansible scripts are in j2 format in-order to enable parameterization.
-
 
 #### Step 1
 Uncomment the following line in `main.yml` under the role you want to customize.

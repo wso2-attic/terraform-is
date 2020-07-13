@@ -19,3 +19,8 @@ Packer Directories and Files
     
 `Vagrantfile` - 
     contained relavant vagrant configurations for test the Ansible playbook changes in locally
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 5.10.x
