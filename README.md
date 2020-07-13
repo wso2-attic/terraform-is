@@ -1,4 +1,4 @@
-#Terraform Resources for WSO2 Identity Server
+# Terraform Resources for WSO2 Identity Server
 
 ## Installation
 
